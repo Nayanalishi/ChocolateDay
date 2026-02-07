@@ -1,174 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Chocolate Day 🍫</title>
+    <meta charset="UTF-8">
+    <title>Happy Chocolate Day ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #2b1b17, #4a2c23);
+            font-family: 'Montserrat', sans-serif;
+        }
 
-  <!-- Cozy romantic fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 420px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      background: linear-gradient(135deg, #4b2e2b, #7a4a3b);
-      color: #fff3ec;
-      overflow-x: hidden;
-    }
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
 
-    .slide {
-      min-height: 100vh;
-      padding: 40px 20px;
-      position: relative;
-    }
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: #f5d6c6;
+            margin-bottom: 15px;
+        }
 
-    /* SLIDE 1 — QUOTE */
-    .quote {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.9rem;
-      max-width: 750px;
-      margin: 110px auto 50px;
-      line-height: 1.9;
-      color: #ffe6d8;
-    }
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-style: italic;
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
 
-    .choco-btn {
-      font-size: 4.2rem;
-      cursor: pointer;
-      animation: softPulse 1.7s infinite;
-    }
-
-    .tap-text {
-      margin-top: 6px;
-      font-style: italic;
-      opacity: 0.8;
-    }
-
-    @keyframes softPulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
-
-    /* SLIDE 2 */
-    .slide2 {
-      display: none;
-      background: linear-gradient(135deg, #5c3a30, #8b5a46);
-      overflow: hidden;
-    }
-
-    .slide2 h1 {
-      font-size: 3.1rem;
-      margin-top: 40px;
-      font-weight: 600;
-      color: #fff1e8;
-    }
-
-    .sub-text {
-      font-size: 1.6rem;
-      margin-bottom: 25px;
-      font-style: italic;
-      color: #ffd9c7;
-    }
-
-    .main-img {
-      width: 320px;
-      max-width: 85%;
-      border-radius: 28px;
-      margin: 28px auto;
-      display: block;
-      box-shadow: 0 20px 38px rgba(0,0,0,0.45);
-      position: relative;
-      z-index: 2;
-    }
-
-    .message {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.85rem;
-      max-width: 650px;
-      margin: 20px auto;
-      line-height: 1.75;
-      position: relative;
-      z-index: 2;
-      color: #ffe6d8;
-    }
-
-    /* Floating chocolate hearts */
-    .heart {
-      position: absolute;
-      top: -10%;
-      font-size: 18px;
-      opacity: 0.45;
-      animation: fall linear infinite;
-      z-index: 1;
-      pointer-events: none;
-      color: #d9a27c;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(120vh);
-        opacity: 0;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- SLIDE 1 -->
-  <div class="slide" id="slide1">
-    <div class="quote">
-      “Just like dark chocolate, our love is both bitter and sweet.  
-      Even through the bitterness, we choose it —  
-      because the sweetness always finds a way  
-      to balance our hearts.”
-    </div>
-
-    <div class="choco-btn" onclick="showSlide2()">🍫</div>
-    <div class="tap-text">tap</div>
-  </div>
-
-  <!-- SLIDE 2 -->
-  <div class="slide slide2" id="slide2">
-    <h1>Happy Chocolate Day</h1>
-    <div class="sub-text">My Sweetest Constant 🤎</div>
-
-    <!-- YOUR IMAGE -->
-    <img src="chocolateday.png" class="main-img" alt="Chocolate Day Image">
-
-    <div class="message">
-      Through every mood, every phase,  
-      every bitter truth and gentle sweetness —  
-      I’d still choose <b>us</b>. 🍫🤍
-    </div>
-  </div>
-
-  <script>
-    function showSlide2() {
-      document.getElementById("slide1").style.display = "none";
-      const slide2 = document.getElementById("slide2");
-      slide2.style.display = "block";
-      startHearts();
-    }
-
-    function startHearts() {
-      const slide = document.getElementById("slide2");
-      for (let i = 0; i < 28; i++) {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.innerHTML = "🤎";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = (5 + Math.random() * 5) + "s";
-        heart.style.fontSize = (12 + Math.random() * 14) + "px";
-        slide.appendChild(heart);
-
-        setTimeout(() => heart.remove(), 9000);
-      }
-    }
-  </script>
-
-</body>
-</html>
+        .footer {
+            font-size: 14px;
+            color: #e0b9a8;
+            letter-spacing: 1px;
