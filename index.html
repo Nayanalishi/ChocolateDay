@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Happy Chocolate Day ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Chocolate Day 🍫</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
@@ -24,21 +25,22 @@
         }
 
         .card {
-            background: #3a231d; /* solid background → GitHub Pages safe */
-            border-radius: 20px;
-            padding: 25px;
+            background-color: #3a231d;
+            border-radius: 22px;
+            padding: 24px;
+            width: 92%;
             max-width: 420px;
-            width: 90%;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
         }
 
-        .card-image {
+        img {
             width: 100%;
-            height: 260px;
+            height: auto;
+            max-height: 260px;
             object-fit: cover;
             display: block;
-            border-radius: 15px;
+            border-radius: 16px;
             margin-bottom: 20px;
             background-color: #000;
         }
@@ -47,7 +49,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 26px;
             color: #f5d6c6;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .quote {
@@ -55,7 +57,7 @@
             font-size: 18px;
             font-style: italic;
             color: #ffffff;
-            line-height: 1.6;
+            line-height: 1.65;
             margin-bottom: 18px;
         }
 
@@ -71,8 +73,8 @@
 
     <div class="card">
 
-        <!-- IMAGE (FIXED & VERIFIED FOR GITHUB PAGES) -->
-        <img src="./chocolateday.png" alt="Chocolate Day Image" class="card-image">
+        <!-- IMAGE LINKED USING EXACT FILE NAME -->
+        <img src="chocolateday.png" alt="Chocolate Day Image">
 
         <div class="title">Happy Chocolate Day 🍫</div>
 
